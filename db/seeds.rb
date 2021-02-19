@@ -2,7 +2,9 @@ require 'json'
 require 'open-uri'
 
 puts "cleaning database"
+Dose.destroy_all
 Ingredient.destroy_all
+Cocktail.destroy_all
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient_serialized = open(url).read
