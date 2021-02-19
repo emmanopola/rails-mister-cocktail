@@ -24,7 +24,7 @@ before_action :find_cocktail, only: [:show]
   private
 
   def strong_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 
   def find_cocktail
